@@ -7,6 +7,7 @@ package telas;
 
 import javax.swing.JOptionPane;
 import dados.Produto;
+import repositorio.RepositorioDados;
 /**
  *
  * @author Douglas
@@ -154,6 +155,10 @@ public class TelaCadastrarProduto extends javax.swing.JFrame {
         
         // fechar a tela a salvar
         this.dispose();
+        
+        // salvar o objeto na lista de REPOSITORIO DE DADOS
+        RepositorioDados.adicionarProduto(produtoAtual);
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

@@ -37,6 +37,12 @@ public class Produto {
                    double precoVenda, 
                    double precoCusto) {
         
+                // criar um código autoincremental
+        codigo = contadorCodigo;
+        
+        // atualizar o contador de codigo
+        contadorCodigo++;
+        
         System.out.println("Construtor com argumentos");
         
         
