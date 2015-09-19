@@ -14,11 +14,29 @@ import repositorio.RepositorioDados;
  */
 public class TelaCadastrarProduto extends javax.swing.JFrame {
 
+    private Produto produto = null;
+    
+    public TelaCadastrarProduto(Produto produto) {
+        initComponents();
+        
+        this.produto = produto;
+        
+        // atualiza os campos caso exista um Produto para editar
+        if (this.produto != null) {
+            campoNome.setText(produto.getNome());
+            campoDesc.setText(produto.getDesc());
+            campoPC.setText(String.valueOf(produto.getPrecoCusto()));
+            campoPV.setText(String.valueOf(produto.getPrecoVenda()));
+        }
+     
+    }
+    
     /**
      * Creates new form TelaCadastrarProduto
      */
     public TelaCadastrarProduto() {
         initComponents();
+   
     }
 
     /**
@@ -144,20 +162,38 @@ public class TelaCadastrarProduto extends javax.swing.JFrame {
         double precoCusto = Double.parseDouble(pc);
      
         
-        // criando um objeto Produto
-        Produto produtoAtual = new Produto(nome, desc, precoVenda, precoCusto);
+        if (this.produto != null) {
+            
+            // atualizar o produto existente
+            
+            this.produto.setNome(nome);
+            this.produto.setDesc(desc);
+            this.produto.setPrecoCusto(precoCusto);
+            this.produto.setPrecoVenda(precoVenda);
+                    
+            RepositorioDados.editarProduto(this.produto);
+            JOptionPane.showMessageDialog(this, "Atualizado com Sucesso!" );
+            
+        } else {
+            
+            // criando um objeto Produto
+            Produto produtoAtual = new Produto(nome, desc, precoVenda, precoCusto);
+
+
+            // metodo opcional para visualizar dados        
+            produtoAtual.imprimirDados(); 
+
+            JOptionPane.showMessageDialog(this, produtoAtual);
+
+            // salvar o objeto na lista de REPOSITORIO DE DADOS
+            RepositorioDados.adicionarProduto(produtoAtual);
+        }
         
         
-        // metodo opcional para visualizar dados        
-        produtoAtual.imprimirDados(); 
-        
-        JOptionPane.showMessageDialog(this, produtoAtual);
         
         // fechar a tela a salvar
         this.dispose();
         
-        // salvar o objeto na lista de REPOSITORIO DE DADOS
-        RepositorioDados.adicionarProduto(produtoAtual);
         
     }//GEN-LAST:event_jButton1ActionPerformed
 

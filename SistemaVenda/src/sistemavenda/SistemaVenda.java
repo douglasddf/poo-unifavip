@@ -6,15 +6,18 @@
 package sistemavenda;
 
 import telas.TelaPrincipal;
+import repositorio.RepositorioDados;
 
 /**
  *
  * @author Douglas
  */
-public class Teste {
+public class SistemaVenda {
     
     public static void main(String[] args) {
         System.out.println("Testando main()");
+        
+        RepositorioDados.inicializandoDados();
      
         TelaPrincipal tela = new TelaPrincipal();
         

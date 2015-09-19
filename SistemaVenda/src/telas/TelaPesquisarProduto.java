@@ -95,7 +95,26 @@ public class TelaPesquisarProduto extends javax.swing.JFrame {
         Produto produto = RepositorioDados.pesquisarProdutoPeloCodigo(cod);
         
         if (produto != null) {
-            JOptionPane.showMessageDialog(this, produto);
+//            JOptionPane.showMessageDialog(this, produto);
+            //JOptionPane.showConfirmDialog(this, produto);
+            int opcao = JOptionPane.showConfirmDialog(this,
+                    produto, 
+                    "Editar o produto?" ,
+                    JOptionPane.YES_NO_OPTION);
+            
+            
+            if (opcao == JOptionPane.YES_OPTION) {
+                System.out.println(" opcao YES ");
+                
+                // chamar a tela de Cadastrar Produto para permitir edicao
+                // passe para a tela o objeto Produto atual
+                TelaCadastrarProduto tela = new TelaCadastrarProduto(produto);
+                tela.setVisible(true);
+                
+            } else if(opcao == JOptionPane.NO_OPTION) {
+                System.out.println(" opcao NO ");
+            }
+            
         } else {
             JOptionPane.showMessageDialog(this, "Não encontrei o produto com esse código");
         }
