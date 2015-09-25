@@ -23,4 +23,6 @@ public class SistemaVenda {
         
     }
     
+    // TAREFAS DA AVALIACAO 1 SERAO PASSADAS EM SALA DE AULA.
+    
 }
