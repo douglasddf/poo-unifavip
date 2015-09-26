@@ -7,6 +7,7 @@ package sistemavenda;
 
 import telas.TelaPrincipal;
 import repositorio.RepositorioDados;
+import telas.TelaLogin;
 
 /**
  *
@@ -20,6 +21,7 @@ public class SistemaVenda {
         RepositorioDados.inicializandoDados();
      
         TelaPrincipal tela = new TelaPrincipal();
+        
         
     }
     

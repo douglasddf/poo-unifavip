@@ -7,6 +7,8 @@ package repositorio;
 
 import dados.Produto;
 import java.util.ArrayList;
+import dados.Cliente;
+import dados.Vendedor;
 
 /**
  * Essa classe é responsável por gerenciar os dados do sistema.
@@ -25,6 +27,9 @@ public class RepositorioDados {
     
     // lista dinamica
     private static ArrayList<Produto> listaProdutos = new ArrayList();
+       private static ArrayList<Cliente> listaCliente = new ArrayList();
+          private static ArrayList<Vendedor> listaVendedor = new ArrayList();
+
     
     
     /**
@@ -48,6 +53,17 @@ public class RepositorioDados {
         listaProdutos.add(p1);
         listaProdutos.add(p2);
         listaProdutos.add(p3);
+    }
+    
+    public static void adicionarCliente(Cliente c) {
+        
+        listaCliente.add(c);
+        
+    }
+    
+    public static boolean temEspacoc() {
+        
+        return listaCliente != null;
     }
     
     
@@ -98,6 +114,7 @@ public class RepositorioDados {
                 produto = produtoAtual;
                 break;
             }
+
         }
 
 //        // pesquisar na lista de Produtos 
@@ -114,6 +131,23 @@ public class RepositorioDados {
         
         return produto;
     }
+                public static Cliente pesquisarClientePeloCPF(String cpf){
+                Cliente cliente = null;
+                
+                for(Cliente clienteAtual : listaCliente){
+                    if (clienteAtual.getCPF() == cpf){
+                        cliente = clienteAtual;
+                        break;
+                        
+                      
+                    }
+                }
+                return cliente;
+                }
+                
+
+
+
 
     /**
      * Permite atualizar o valor do objeto
