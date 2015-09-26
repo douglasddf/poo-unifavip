@@ -22,6 +22,7 @@ public class ClientesTableModel extends AbstractTableModel {
     private final int CIDADE = 4;  
     private final int TELEFONE = 5;
     private final int CELULAR = 6; 
+    private final int CPF = 7;
  
     //variaveis 
     private final ArrayList<Cliente> listaClientes = new ArrayList(); 
@@ -78,6 +79,8 @@ public class ClientesTableModel extends AbstractTableModel {
                 return cliente.getTelefone();
             case CELULAR: 
                 return cliente.getCelular();
+            case CPF: 
+                return cliente.getCpf();
             default:
                 return cliente;
         }

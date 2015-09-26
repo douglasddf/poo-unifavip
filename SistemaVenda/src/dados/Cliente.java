@@ -11,18 +11,18 @@ package dados;
  */
 public class Cliente {
 
-    private String cpf;
+    private int cpf;
     private String nome;
     private String email;
     private String endereco;
-    private String cep;
+    private int cep;
     private String cidade;
-    private String telefone;
-    private String celular;
+    private int telefone;
+    private int celular;
     private int id;
     private static int contador = 1;
 
-    public Cliente(String nome, String email, String endereco, String cep, String cidade, String telefone, String celular) {
+    public Cliente(String nome, String email, String endereco, int cep, String cidade, int telefone, int celular, int cpf) {
 
         this.id = id;
         //atualiza e incrementa o id
@@ -36,14 +36,15 @@ public class Cliente {
         this.cidade = cidade;
         this.celular = celular;
         this.telefone = telefone;
+        this.cpf = cpf;
 
     }
 
     @Override
     public String toString() {
-        return "Cliente{" + "nome=" + nome + "/n email=" + email + "/n endereco=" + endereco + "/n cep=" + cep + "/n cidade=" + cidade + "/n telefone=" + telefone + "/n celular=" + celular;
+        return "Cliente{" + "cpf=" + cpf + ", nome=" + nome + ", email=" + email + ", endereco=" + endereco + ", cep=" + cep + ", cidade=" + cidade + ", telefone=" + telefone + ", celular=" + celular + ", id=" + id + '}';
     }
-    
+
 
     public String getNome() {
         return nome;
@@ -69,11 +70,11 @@ public class Cliente {
         this.endereco = endereco;
     }
 
-    public String getCep() {
+    public int getCep() {
         return cep;
     }
 
-    public void setCep(String cep) {
+    public void setCep(int cep) {
         this.cep = cep;
     }
 
@@ -86,19 +87,19 @@ public class Cliente {
         this.cidade = cidade;
     }
 
-    public String getTelefone() {
+    public int getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(String telefone) {
+    public void setTelefone(int telefone) {
         this.telefone = telefone;
     }
 
-    public String getCelular() {
+    public int getCelular() {
         return celular;
     }
 
-    public void setCelular(String celular) {
+    public void setCelular(int celular) {
         this.celular = celular;
     }
 
@@ -106,11 +107,11 @@ public class Cliente {
         return id;
     }
 
-    public String getCpf() {
+    public int getCpf() {
         return cpf;
     }
 
-    public void setCpf(String cpf) {
+    public void setCpf(int cpf) {
         this.cpf = cpf;
     }
 
