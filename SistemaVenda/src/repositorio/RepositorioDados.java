@@ -24,7 +24,7 @@ public class RepositorioDados {
     */
     
     // lista dinamica
-    private static ArrayList<Produto> listaProdutos = new ArrayList();
+    private static final ArrayList<Produto> listaProdutos = new ArrayList();
     
     
     /**
