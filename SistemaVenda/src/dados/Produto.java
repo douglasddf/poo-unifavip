@@ -12,7 +12,7 @@ package dados;
 public class Produto {
     
   
-    private int codigo;
+    private final int codigo;
     private String nome;
     private String desc;
     private double precoVenda;

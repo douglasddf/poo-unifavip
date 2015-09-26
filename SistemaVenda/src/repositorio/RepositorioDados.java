@@ -100,17 +100,6 @@ public class RepositorioDados {
             }
         }
 
-//        // pesquisar na lista de Produtos 
-//        for (int i = 0; i < listaProdutos.length; i++) {
-//            // recuperar o Produto atual e comparar o codigo
-//            Produto p = listaProdutos[i];
-//            if (p != null && p.getCodigo() == codigo) {
-//                // achei o produto com o codigo correspondente
-//                
-//                produto = p;
-//                break;
-//            }
-//        } // fim laco for
         
         return produto;
     }
@@ -128,13 +117,6 @@ public class RepositorioDados {
                 break;
             }
         }
-        
-//        for (int i = 0; i < listaProdutos.length; i++) {
-//            if (listaProdutos[i].getCodigo() == produto.getCodigo()) {
-//                listaProdutos[i] = produto;
-//                break;
-//            }
-//        }
         
     }
     
