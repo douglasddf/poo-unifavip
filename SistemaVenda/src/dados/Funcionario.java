@@ -7,22 +7,21 @@ package dados;
 
 /**
  *
- * @author Douglas
+ * @author alunofavip
  */
-public class Produto {
-    
+public class Funcionario {  
   
     private int codigo;
     private String nome;
-    private String desc;
-    private double precoVenda;
-    private double precoCusto;
+    private String email;
+    private double CPF;
+    private double Tel;
     
     // variavel auxiliar
     private static int contadorCodigo = 1;
     
     // Construtor default
-    public Produto() {
+    public Funcionario() {
         System.out.println("Construtor default de Produto");
         
         // criar um código autoincremental
@@ -32,10 +31,10 @@ public class Produto {
         contadorCodigo++;
     }
     
-    public Produto(String nome,
-                   String desc,
-                   double precoVenda, 
-                   double precoCusto) {
+    public Funcionario(String nome,
+                   String email,
+                   double CPF, 
+                   double Tel) {
         
                 // criar um código autoincremental
         codigo = contadorCodigo;
@@ -47,9 +46,9 @@ public class Produto {
         
         
         this.nome = nome;
-        this.desc = desc;
-        this.precoVenda = precoVenda;
-        this.precoCusto = precoCusto;
+        this.email = email;
+        this.CPF   = CPF;
+        this.Tel = Tel;
     }
     
     
@@ -70,9 +69,9 @@ public class Produto {
         String relatorio = "";
         relatorio += "Código: "+codigo;
         relatorio += "\nNome: "+nome;
-        relatorio += "\nDescrição: "+desc;
-        relatorio += "\nPreço custo: "+precoCusto;        
-        relatorio += "\nPreço venda: "+precoVenda;
+        relatorio += "\nDescrição: "+email;
+        relatorio += "\nPreço custo: "+Tel;        
+        relatorio += "\nPreço venda: "+CPF;
         
         return relatorio;
     }
@@ -91,27 +90,30 @@ public class Produto {
     }
 
     public String getDesc() {
-        return desc;
+        return email;
     }
 
     public void setDesc(String desc) {
-        this.desc = desc;
+        this.email = email;
     }
 
     public double getPrecoVenda() {
-        return precoVenda;
+        return CPF;
     }
 
     public void setPrecoVenda(double precoVenda) {
-        this.precoVenda = precoVenda;
+        this.CPF = CPF;
     }
 
     public double getPrecoCusto() {
-        return precoCusto;
+        return Tel;
     }
 
     public void setPrecoCusto(double precoCusto) {
-        this.precoCusto = precoCusto;
+        this.Tel = precoCusto;
     }
     
 }
+
+    
+

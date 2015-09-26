@@ -64,11 +64,11 @@ public class TelaCadastrarProduto extends javax.swing.JFrame {
 
         jLabel1.setText("Nome:");
 
-        jLabel2.setText("Descrição:");
+        jLabel2.setText("Descricao");
 
-        jLabel3.setText("Preço venda:");
+        jLabel3.setText("Preco custo:");
 
-        jLabel4.setText("Preço custo:");
+        jLabel4.setText("Preco venda");
 
         jLabel5.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         jLabel5.setText("Cadastro de Produto");

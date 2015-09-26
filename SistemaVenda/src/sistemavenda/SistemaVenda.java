@@ -5,8 +5,8 @@
  */
 package sistemavenda;
 
-import telas.TelaPrincipal;
 import repositorio.RepositorioDados;
+import telas.TelaPrincipal;
 
 /**
  *
