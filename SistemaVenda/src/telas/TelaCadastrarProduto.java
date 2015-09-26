@@ -64,7 +64,19 @@ public class TelaCadastrarProduto extends javax.swing.JFrame {
 
         jLabel1.setText("Nome:");
 
+        campoNome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoNomeActionPerformed(evt);
+            }
+        });
+
         jLabel2.setText("Descrição:");
+
+        campoDesc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoDescActionPerformed(evt);
+            }
+        });
 
         jLabel3.setText("Preço venda:");
 
@@ -196,6 +208,14 @@ public class TelaCadastrarProduto extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void campoNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoNomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoNomeActionPerformed
+
+    private void campoDescActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoDescActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoDescActionPerformed
 
     /**
      * @param args the command line arguments
