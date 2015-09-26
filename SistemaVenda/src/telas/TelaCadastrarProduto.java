@@ -61,6 +61,7 @@ public class TelaCadastrarProduto extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Cadastro de Produto");
 
         jLabel1.setText("Nome:");
 
