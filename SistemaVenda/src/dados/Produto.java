@@ -23,7 +23,9 @@ public class Produto {
     
     // Construtor default
     public Produto() {
+        
         System.out.println("Construtor default de Produto");
+        
         
         // criar um código autoincremental
         codigo = contadorCodigo;
