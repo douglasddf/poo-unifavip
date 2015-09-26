@@ -7,6 +7,7 @@ package repositorio;
 
 import dados.Produto;
 import java.util.ArrayList;
+import telas.Login;
 
 /**
  * Essa classe é responsável por gerenciar os dados do sistema.
@@ -48,6 +49,7 @@ public class RepositorioDados {
         listaProdutos.add(p1);
         listaProdutos.add(p2);
         listaProdutos.add(p3);
+        
     }
     
     

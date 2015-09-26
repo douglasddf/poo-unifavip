@@ -173,7 +173,7 @@ public class TelaCadastrarProduto extends javax.swing.JFrame {
                     
             RepositorioDados.editarProduto(this.produto);
             JOptionPane.showMessageDialog(this, "Atualizado com Sucesso!" );
-            
+            this.dispose();
         } else {
             
             // criando um objeto Produto

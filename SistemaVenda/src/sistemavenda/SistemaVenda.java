@@ -7,6 +7,7 @@ package sistemavenda;
 
 import telas.TelaPrincipal;
 import repositorio.RepositorioDados;
+import telas.Login;
 
 /**
  *
@@ -15,12 +16,11 @@ import repositorio.RepositorioDados;
 public class SistemaVenda {
     
     public static void main(String[] args) {
-        System.out.println("Testando main()");
         
-        RepositorioDados.inicializandoDados();
-     
-        TelaPrincipal tela = new TelaPrincipal();
-        
+       Login login = new Login();
+       login.setVisible(true);
+              
+       
     }
     
     // TAREFAS DA AVALIACAO 1 SERAO PASSADAS EM SALA DE AULA. (previsao 25/ago/2015)
