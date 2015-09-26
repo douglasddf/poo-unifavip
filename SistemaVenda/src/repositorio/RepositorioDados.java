@@ -5,6 +5,8 @@
  */
 package repositorio;
 
+import dados.Cliente;
+import dados.Funcionario;
 import dados.Produto;
 import java.util.ArrayList;
 
@@ -25,7 +27,8 @@ public class RepositorioDados {
     
     // lista dinamica
     private static ArrayList<Produto> listaProdutos = new ArrayList();
-    
+    private static ArrayList<Cliente> listaCliente = new ArrayList();
+    private static ArrayList<Funcionario> listaFuncionario = new ArrayList();
     
     /**
      * Estrutura para carregar dados FAKE na memória
@@ -137,5 +140,90 @@ public class RepositorioDados {
 //        }
         
     }
+    
+     public static void adicionarCliente(Cliente p) {
+        
+        /* LOGICA USADA PARA ARRAY estático
+         adiciona o objeto Cliente para o array
+//        listaClientes[posicaoLivre] = p;
+         atualizar o valor do contador livre
+//        posicaoLivre++;
+       */
+        listaCliente.add(p);
+    }
+    public static Cliente pesquisarClientePeloCodigo(int codigo) {
+        Cliente cliente = null;
+        
+        // usando laço For each: 
+        // http://www.javaprogressivo.net/2012/09/o-laco-for-para-arrays.html
+        for (Cliente clienteAtual : listaCliente) {
+            if (clienteAtual.getCodigo() == codigo) {
+                // achei o cliente com o codigo correspondente
+                cliente = clienteAtual;
+                break;
+            }
+        }
+        
+        return cliente;
+    }
+
+    /**
+     * Permite atualizar o valor do objeto
+     * 
+     * @param cliente  objeto Cliente a ser editado.
+     */
+    public static void editarCliente(Cliente cliente) {
+        
+        for (Cliente p : listaCliente) {
+            if (p.getCodigo() == cliente.getCodigo()) {
+                p = cliente;
+                break;
+            }
+        }
+        
+    }
+    
+     public static void adicionarFuncionario(Funcionario p) {
+        
+        /* LOGICA USADA PARA ARRAY estático
+         adiciona o objeto Funcionario para o array
+//        listaFuncionarios[posicaoLivre] = p;
+         atualizar o valor do contador livre
+//        posicaoLivre++;
+       */
+        listaFuncionario.add(p);
+    }
+    public static Funcionario pesquisarFuncionarioPeloCodigo(int codigo) {
+        Funcionario funcionario = null;
+        
+        // usando laço For each: 
+        // http://www.javaprogressivo.net/2012/09/o-laco-for-para-arrays.html
+        for (Funcionario funcionarioAtual : listaFuncionario) {
+            if (funcionarioAtual.getCodigo() == codigo) {
+                // achei o funcionario com o codigo correspondente
+                funcionario = funcionarioAtual;
+                break;
+            }
+        }
+ return funcionario;
+    }
+
+    /**
+     * Permite atualizar o valor do objeto
+     * 
+     * @param funcionario  objeto Funcionario a ser editado.
+     */
+    public static void editarFuncionario(Funcionario funcionario) {
+        
+        for (Funcionario p : listaFuncionario) {
+            if (p.getCodigo() == funcionario.getCodigo()) {
+                p = funcionario;
+                break;
+            }
+        }
+ 
+        
+    }
+    
     
 } // fim classe

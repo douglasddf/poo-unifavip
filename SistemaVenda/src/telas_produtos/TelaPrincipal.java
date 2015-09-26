@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package telas;
+package telas_produtos;
 
 import javax.swing.JOptionPane;
 import repositorio.RepositorioDados;
