@@ -73,6 +73,7 @@ public class Produto {
         relatorio += "\nDescrição: "+desc;
         relatorio += "\nPreço custo: "+precoCusto;        
         relatorio += "\nPreço venda: "+precoVenda;
+        relatorio += "\nLucro: "+(precoVenda-precoCusto);
         
         return relatorio;
     }

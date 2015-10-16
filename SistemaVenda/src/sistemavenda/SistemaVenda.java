@@ -5,8 +5,11 @@
  */
 package sistemavenda;
 
+import dados.Produto;
+import dados.Venda;
+import java.util.ArrayList;
 import telas.TelaPrincipal;
-import repositorio.RepositorioDados;
+import repositorio.RepositorioProdutos;
 
 /**
  *
@@ -17,9 +20,25 @@ public class SistemaVenda {
     public static void main(String[] args) {
         System.out.println("Testando main()");
         
-        RepositorioDados.inicializandoDados();
+        RepositorioProdutos.inicializandoDados();
      
-        TelaPrincipal tela = new TelaPrincipal();
+        //TelaPrincipal tela = new TelaPrincipal();
+        
+        Venda venda1 = new Venda();
+        
+       
+        Produto produto1 = new Produto("PC", "descricao...", 1000, 550);
+        Produto produto2 = new Produto("Notebook", "descricao...", 2000, 1250);
+        Produto produto3 = new Produto("Capa iPhone 6s", "capa ...", 300, 50);
+        
+        
+        venda1.adicionarItemVenda(produto1, 1);
+        venda1.adicionarItemVenda(produto2, 1);
+        venda1.adicionarItemVenda(produto3, 3);
+        
+        // como exibir os dados da venda?
+        System.out.println("VENDA1: \n\n"+venda1);
+        
         
     }
     

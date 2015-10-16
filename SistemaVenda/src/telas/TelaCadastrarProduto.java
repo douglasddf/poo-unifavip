@@ -7,7 +7,7 @@ package telas;
 
 import javax.swing.JOptionPane;
 import dados.Produto;
-import repositorio.RepositorioDados;
+import repositorio.RepositorioProdutos;
 /**
  *
  * @author Douglas
@@ -171,7 +171,7 @@ public class TelaCadastrarProduto extends javax.swing.JFrame {
             this.produto.setPrecoCusto(precoCusto);
             this.produto.setPrecoVenda(precoVenda);
                     
-            RepositorioDados.editarProduto(this.produto);
+            RepositorioProdutos.editarProduto(this.produto);
             JOptionPane.showMessageDialog(this, "Atualizado com Sucesso!" );
             
         } else {
@@ -186,7 +186,7 @@ public class TelaCadastrarProduto extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, produtoAtual);
 
             // salvar o objeto na lista de REPOSITORIO DE DADOS
-            RepositorioDados.adicionarProduto(produtoAtual);
+            RepositorioProdutos.adicionarProduto(produtoAtual);
         }
         
         

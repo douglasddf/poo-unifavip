@@ -6,7 +6,7 @@
 package telas;
 
 import javax.swing.JOptionPane;
-import repositorio.RepositorioDados;
+import repositorio.RepositorioProdutos;
 
 
 /**
@@ -115,7 +115,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         
         // verificar se tem ou nao espaco
-        if (RepositorioDados.temEspaco()) {
+        if (RepositorioProdutos.temEspaco()) {
             // acao abrir tela Cadastrar Produto
             TelaCadastrarProduto telaProduto = new TelaCadastrarProduto();
             telaProduto.setVisible(true);

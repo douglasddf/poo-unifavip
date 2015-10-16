@@ -7,7 +7,7 @@ package telas;
 
 import dados.Produto;
 import javax.swing.JOptionPane;
-import repositorio.RepositorioDados;
+import repositorio.RepositorioProdutos;
 
 /**
  *
@@ -92,7 +92,7 @@ public class TelaPesquisarProduto extends javax.swing.JFrame {
         
         int cod = Integer.parseInt(codigo);
         
-        Produto produto = RepositorioDados.pesquisarProdutoPeloCodigo(cod);
+        Produto produto = RepositorioProdutos.pesquisarProdutoPeloCodigo(cod);
         
         if (produto != null) {
 //            JOptionPane.showMessageDialog(this, produto);
