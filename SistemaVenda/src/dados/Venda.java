@@ -18,18 +18,25 @@ public class Venda {
     private int codigo;
     private Date data = new Date();
     private ArrayList<ItensVenda>itensVenda = new ArrayList<>();
-    
+    private Funcionario funcionario;
     
     private static int codigoAutoIncremento = 1;
     
     
-    public Venda() {
+    public Venda(Funcionario funcionario) {
         this.codigo = codigoAutoIncremento++;
+        this.funcionario = funcionario;
     }
 
     public void adicionarItemVenda(Produto produto, int quantidade) {
         ItensVenda itemProduto = new ItensVenda(quantidade, produto);        
         this.itensVenda.add(itemProduto);
+        
+        // atualizar a comissao / registro do funcionario
+        double lucro = produto.getPrecoVenda() - produto.getPrecoCusto();
+        funcionario.atualizarLucroDeVendas(lucro);
+        funcionario.atualizarQuantideDeVendas(quantidade);
+        
     }
     
     public ArrayList<ItensVenda> mostrarProdutosDaVenda() {
@@ -56,6 +63,7 @@ public class Venda {
         
         dadosVenda += "\nCódigo: "+codigo;
         dadosVenda += "\nData: "+data.toString();
+        dadosVenda += "\nFuncinário: "+funcionario.getNome();
         float totalCusto=0, totalVenda=0, totalLucro = 0;
         
         

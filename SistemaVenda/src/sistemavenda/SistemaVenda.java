@@ -5,8 +5,7 @@
  */
 package sistemavenda;
 
-import dados.Produto;
-import dados.Venda;
+import dados.*;
 import java.util.ArrayList;
 import telas.TelaPrincipal;
 import repositorio.RepositorioProdutos;
@@ -24,7 +23,9 @@ public class SistemaVenda {
      
         //TelaPrincipal tela = new TelaPrincipal();
         
-        Venda venda1 = new Venda();
+        Funcionario funcionario = new Funcionario("Joao Maria Jose");
+        
+        Venda venda1 = new Venda(funcionario);
         
        
         Produto produto1 = new Produto("PC", "descricao...", 1000, 550);
@@ -38,6 +39,7 @@ public class SistemaVenda {
         
         // como exibir os dados da venda?
         System.out.println("VENDA1: \n\n"+venda1);
+        
         
         
     }
