@@ -19,13 +19,15 @@ public class Venda {
     private Date data = new Date();
     private ArrayList<ItensVenda>itensVenda = new ArrayList<>();
     private Funcionario funcionario;
+    private Cliente cliente;
     
     private static int codigoAutoIncremento = 1;
     
     
-    public Venda(Funcionario funcionario) {
+    public Venda(Funcionario funcionario,Cliente cliente) {
         this.codigo = codigoAutoIncremento++;
         this.funcionario = funcionario;
+        this.cliente = cliente;
     }
 
     public void adicionarItemVenda(Produto produto, int quantidade) {

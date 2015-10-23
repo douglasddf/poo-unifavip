@@ -24,13 +24,16 @@ public class SistemaVenda {
         //TelaPrincipal tela = new TelaPrincipal();
         
         Funcionario funcionario = new Funcionario("Joao Maria Jose");
+        Cliente cliente1 = new Cliente("Xuxa", false, "23/10/2015");
         
-        Venda venda1 = new Venda(funcionario);
+        
+        Venda venda1 = new Venda(funcionario,cliente1);
         
        
         Produto produto1 = new Produto("PC", "descricao...", 1000, 550);
         Produto produto2 = new Produto("Notebook", "descricao...", 2000, 1250);
         Produto produto3 = new Produto("Capa iPhone 6s", "capa ...", 300, 50);
+        
         
         
         venda1.adicionarItemVenda(produto1, 1);
@@ -39,6 +42,8 @@ public class SistemaVenda {
         
         // como exibir os dados da venda?
         System.out.println("VENDA1: \n\n"+venda1);
+        
+        
         
         
         
