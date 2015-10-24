@@ -9,17 +9,16 @@ package dados;
  *
  * @author Douglas
  */
-public class Funcionario {
+public class Funcionario extends Pessoa {
     
-    private int codigo;
-    private String nome;
+    
     private double acumuladoLucroVendas;
     private int quantidadeVendas;
 
     private static int contador = 1;
     
     public Funcionario(String nome) {
-        this.nome = nome;
+        super(nome);
         this.codigo = contador++;
         
     }
@@ -37,20 +36,14 @@ public class Funcionario {
         String relatorio = "";
         
         relatorio += "código: "+codigo;
-        relatorio += "\nnome: "+nome;
+        relatorio += "\nnome: "+super.getNome();
         relatorio += "\nacumulado lucros: "+acumuladoLucroVendas;
         relatorio += "\nquantida de vendas: "+quantidadeVendas;
         
         return relatorio;
     }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+  
 
     public double getAcumuladoLucroVendas() {
         return acumuladoLucroVendas;
@@ -68,9 +61,7 @@ public class Funcionario {
         this.quantidadeVendas = quantidadeVendas;
     }
 
-    public int getCodigo() {
-        return codigo;
-    }
+
     
     
     

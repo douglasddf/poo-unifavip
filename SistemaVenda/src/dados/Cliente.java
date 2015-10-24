@@ -21,16 +21,16 @@ public class Cliente extends Pessoa {
     private static int contadorAutoIncremental;
     
     public Cliente() {
-        
+        super();
         codigo = ++contadorAutoIncremental;
         
     }
 
     public Cliente(String nome, boolean ehMasculino, String dataNascimento) {
-        
+        super(nome);
         codigo = ++contadorAutoIncremental;
         
-        this.nome = nome;
+        
         this.ehMasculino = ehMasculino;
         this.dataNascimento = dataNascimento;
        

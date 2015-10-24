@@ -12,7 +12,7 @@ package dados;
 public class Pessoa {
     
     protected int codigo;
-    protected String nome; 
+    private String nome; 
     
     
     public Pessoa() {
@@ -33,4 +33,6 @@ public class Pessoa {
     public int getCodigo() {
         return codigo;
     }
+    
+    
 }

@@ -7,9 +7,10 @@ package sistemavenda;
 
 import dados.*;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import telas.TelaPrincipal;
 import repositorio.RepositorioProdutos;
-
+import repositorio.RepositorioVendas;
 /**
  *
  * @author Douglas
@@ -27,6 +28,8 @@ public class SistemaVenda {
         Cliente cliente1 = new Cliente("Xuxa", false, "23/10/2015");
         
         
+        JOptionPane.showMessageDialog(null, "nome: "+cliente1.getNome());
+        
         Venda venda1 = new Venda(funcionario,cliente1);
         
        
@@ -43,7 +46,14 @@ public class SistemaVenda {
         // como exibir os dados da venda?
         System.out.println("VENDA1: \n\n"+venda1);
         
+        RepositorioVendas.salvarVenda(venda1);
         
+        
+        for (Venda venda : RepositorioVendas.obterVendas()) {
+            System.out.println(venda);
+            
+            ArrayList<ItensVenda> produtos = venda.getProdutos();
+        }
         
         
         

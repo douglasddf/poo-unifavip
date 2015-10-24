@@ -109,4 +109,8 @@ public class Venda {
         
         return dadosVenda;
     }
+    
+    public ArrayList<ItensVenda> getProdutos() {
+        return itensVenda;
+    }
 }
